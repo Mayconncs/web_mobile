@@ -12,7 +12,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary"  data-bs-theme="dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar scroll</a>
+        <a class="navbar-brand" href="#">Restaurante</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -21,13 +21,7 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Link
-              </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Action</a></li>
                 <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -46,22 +40,53 @@
         </div>
       </div>
     </nav>
-    
-    <form class="w-75">
+
+    <h1 class="text-center">Bem-vindo ao nosso Restaurante</h1>
+
+    <img src="img/imageRest.jpg" class="img-fluid d-block mx-auto mb-3" alt="Restaurante" style="width: 500px; height: auto;">
+
+    <div class="container mt-3" style="max-width: 1000px;">
+      <label for="exampleDataList" class="form-label mb-3">Escolha a refeição</label>
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="refeição">
+      <datalist id="datalistOptions">
+        <option value="Feijoada Completa">
+        <option value=" Lasanha à Bolonhesa">
+        <option value="Strogonoff de Frango">
+        <option value="Pizza Quatro Queijos">
+        <option value="O Prato da Casa">
+      </datalist>
+      
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        <label for="exampleFormControlInput1" class="form-label">Nome:</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Seu nome">
       </div>
+
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="telefone" class="form-label">Telefone</label>
+        <input type="tel" class="form-control" id="telefone" placeholder="(XX) XXXXX-XXXX">
       </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Tem algo mais que gostaria de acrescentar?</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+
+      <div class="mb-3">
+        <label for="valorFinal" class="form-label">Valor Final</label>
+        <input type="text" class="form-control" id="valorFinal" value="R$ 0,00" readonly>
+      </div>
+
+      <div class="mb-3">
+        <label for="pagamento" class="form-label">Forma de Pagamento</label>
+        <select class="form-select" id="pagamento">
+            <option value="dinheiro">Dinheiro</option>
+            <option value="cartao">Cartão de Crédito</option>
+            <option value="pix">PIX</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Finalizar Pedido</button>
+    </div>
+  
 </body>
 </html>
